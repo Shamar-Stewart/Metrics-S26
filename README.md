@@ -9,7 +9,7 @@ Below is the live schedule for Fundamentals of Econometrics - Spring 2026
 |        | **Part I. Regression Analysis with Cross-Sectional Data**               |         |
 | 2      | [The Simple Linear Regression Model](Lectures/L2/L2_Simple_Regression.pdf)         |  [HW2. RMD FILE](3.Homework/HW2/AAEC4804_STAT_4804_AAEC_5804G_HW2_Empty.Rmd) <br> [HW2. PDF FILE](3.Homework/HW2/AAEC4804_STAT_4804_AAEC_5804G_HW2_Empty.pdf)   <br> :clock12: $${\color{blue}\text{Due: Feb 20, 2026 (12:00 PM)}}$$     
 | 3      | [Multiple Regression Analysis: Estimation](2.Lectures/L3/L3_Multiple_Regression.pdf)                                | [HW3. RMD FILE](3.Homework/HW3/AAEC4804_STAT4804_AAEC5804G_HW3-S26_Empty.Rmd) <br> [HW3. PDF FILE](3.Homework/HW3/AAEC4804_STAT4804_AAEC5804G_HW3-S26_Empty.pdf)   <br> :clock12: $${\color{blue}\text{Due: March 6, 2026 (12:00 PM)}}$$        |
-| 4      | [Multiple Regression Analysis: Inference](2.Lectures/L4/L4_Multiple_Regression_Hypothesis.pdf)                                 |         |
+| 4      | [Multiple Regression Analysis: Inference](2.Lectures/L4/L4_Multiple_Regression_Hypothesis.pdf)                                 |[HW4. RMD FILE](3.Homework/HW4/AAEC4804_STAT4804_AAEC5804G_HW4-S26_Empty.Rmd) <br> [HW4. PDF FILE](3.Homework/HW4/AAEC4804_STAT4804_AAEC5804G_HW4-S26_Empty.pdf)   <br> :clock4: $${\color{blue}\text{Due: March 25, 2026 (4:00 PM)}}$$         |
 | 6      | Multiple Regression Analysis: Further Issues                             |         |
 | 7      | Multiple Regression Analysis with Qualitative Information               |         |
 | 8      | Heteroskedasticity                                                      |         |
