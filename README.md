@@ -12,7 +12,7 @@ Below is the live schedule for Fundamentals of Econometrics - Spring 2026
 | 4      | [Multiple Regression Analysis: Inference](2.Lectures/L4/L4_Multiple_Regression_Hypothesis.pdf)                                 |[HW4. RMD FILE](3.Homework/HW4/AAEC4804_STAT4804_AAEC5804G_HW4-S26_Empty.Rmd) <br> [HW4. PDF FILE](3.Homework/HW4/AAEC4804_STAT4804_AAEC5804G_HW4-S26_Empty.pdf)   <br> :clock4: $${\color{blue}\text{Due: March 25, 2026 (4:00 PM)}}$$         |
 | 6      | [Multiple Regression Analysis: Further Issues](2.Lectures/L5/L5_Multiple_Regression_Further_Issues.pdf)                             |         |
 | 7      | [Multiple Regression Analysis with Qualitative Information](2.Lectures/L6/L6_Multiple_Regression_Qualitative_Info.pdf)               |         |
-| 8      | Heteroskedasticity                                                      |         |
+| 8      | [Heteroskedasticity](2.Lectures/L7/L7_Heteroskedasticity.pdf)                                                     |         |
 | 9      | More on Specification & Data Issues                                     |         |
 |        | **Part II. Regression Analysis with Time Series Data & Advanced Topics**|         |
 | 10     | Basic Regression Analysis with Time Series Data                          |         |
