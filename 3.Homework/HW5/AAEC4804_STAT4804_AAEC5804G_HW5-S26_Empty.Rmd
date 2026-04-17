@@ -1,0 +1,104 @@
+---
+title: 'AAEC 4804/5804G, STAT 4804: Fundamentals of Econometrics'
+author: __Your Name Here__
+date: "Spring 2026 -- Homework #5" 
+output: 
+  pdf_document:
+    keep_tex: no
+
+header-includes:
+ \usepackage{mathtools,cancel, wrapfig,amsmath} 
+geometry: margin=0.8in # sets the page margins
+colorlinks: true # enables colored links
+---
+
+```{r setup, include=FALSE}
+# Setup chunk reserved for loading packages and setting global options
+library(wooldridge); library(lmtest); library(dplyr)
+library(stargazer); library(tidyverse);
+library(patchwork); library(car); 
+theme_set(theme_minimal()) 
+knitr::opts_chunk$set(echo=TRUE, message=FALSE, warning=FALSE,fig.height=3, font.size = 10) 
+# Report values to 3 decimal places
+options(digits = 3)
+
+# Download the image for Question 1
+download.file(
+  url = "https://preview.redd.it/mlb-top-total-and-average-salaries-by-position-3-infocharts-v0-81ngf8v2knvc1.jpg?width=1080&crop=smart&auto=webp&s=b5b34ac2d41e9d7904ff954be8e7e3b29e542e0d",
+  destfile = "mlb_salaries.jpg",
+  mode = "wb"
+)
+```
+
+
+# Instructions
+
+This homework is intended to help you review the material covered in Lecture 5. This week we have a greater emphasis on real world application. 
+
+**You are strongly encouraged to work with your classmates, but you must submit your own Solutions.**
+
+## Question 1: Major League Baseball (MLB) Data
+
+\begin{wrapfigure}{l}{0.3\textwidth}
+  \includegraphics[width=0.3\textwidth, height=2in, trim=0.15in 0.0in 0.15in 1in, clip]{mlb_salaries.jpg}
+\end{wrapfigure}
+
+Colvin is a baseball fan-- though he'd never admit it. He recently came across an article on MLB salary breakdowns and, trying to appear casually indifferent, mentioned offhand that the variability in salaries might have something to do with player position. (He definitely didn't spend three hours reading about it.)
+
+Colvin decided to do a little research and found a dataset (`mlb1` from the `wooldridge` package) on the salaries of players in the MLB, their position, and their performance. He decided to run a regression of the salary of the player on their position and performance. Colvin is interested in the following model:
+$$\begin{aligned} 
+\log(salary) = \, &\beta_0 + \beta_1 years + \beta_2 gamesyr + \beta_3 bavg +
+\beta_4 hrunsyr + \beta_5 rbisyr + \\
+& \beta_6 runsyr + \beta_7 fldperc + \beta_8 allstar + \beta_9 frstbase + \beta_{10} scndbase +\\
+& \beta_{11} thrdbase + \beta_{12} shrtstop + \beta_{13} outfield + u
+\end{aligned}$$
+here, $catcher$ will serve as the base category for the position of the player.
+
+(i.) Run and report the model he suggested and interpret the results on the coefficients $years$, $gamesyr$, $shrtstop$, and $outfield$. **In cases where these coefficients are statistically significant, discuss the main takeaway from this finding. Also, ensure that your interpretations are in terms of salary and not in terms of the log of salary.**
+
+
+(ii.) Colvin's two favorite players --- not that he has favorite players, obviously --- both happen to play outfield. He is curious to know if, controlling for other factors, outfield and first base players earn the same salary. Set up, conduct, and interpret the results of a hypothesis test to determine if this is true.
+
+
+(iii.) Cary has just watched her first baseball game and is now fully convinced she understands everything about the sport. She has strong opinions and cannot fathom that a player's position has anything to do with their wages. She wants the data to prove it. Set up, conduct, and interpret the results of a hypothesis test to determine if this is true.
+
+
+\newpage
+
+## Question 2: The GQ Effect — Do Good Looks Pay?
+
+Adam is convinced he belongs on the cover of GQ magazine. Rarely seen without his Ray-Bans, he has strong opinions about the role of attractiveness in the labor market --- and a suspicion that his chiseled jawline has been quietly padding his paycheck for years. His best friend Reagan, who is decidedly more skeptical, thinks Adam is delusional and that looks have nothing to do with wages.
+
+He might be on to something, though. The economic literature has long suggested that physical appearance carries a measurable labor market premium. Hamermesh and Biddle (1994) were among the first to document this formally, finding that attractive individuals earn significantly more than their less attractive counterparts-- a so-called "beauty premium"-- and are more likely to be employed and promoted. The mechanisms are not hard to imagine: think of the waitress who earns higher tips from appreciative customers, the flight attendant whose employer quite literally selects for appearance, or the front desk worker who serves as the public face of a business. Beyond customer-facing roles, the literature suggests that attractiveness may also signal broader social skills and confidence, leading employers to favor good-looking candidates even in roles with no public interaction. A modified version of the Hamermesh and Biddle data is available in the `beauty` dataset in the `wooldridge` package.
+
+(i) Using the `summarize()` function, calculate and report separately, the proportion of men and women that are classified as being above- and below-average looking. **Report these values in percentages. Ensure that you explicitly indicate the gender of the respondents in your table.**
+
+
+(ii) Adam and Reagan proceed by estimating the following regression:
+$$\log(wage) = \beta_0 + \beta_1 belavg + \beta_2 abvavg + u$$
+
+(a) Reagan argues that the model will suffer from perfect multicollinearity --- the dummy variable trap, specifically. Explain why she is wrong and should consider enrolling in this class next semester.
+
+
+(b) Run the regression separately for males and females and report the results using the `stargazer()` function with appropriately labelled models. Give the **precise** interpretations of the coefficients on the **independent variables in terms of wage**.
+
+
+(iii) Adam and Reagan decided to conduct the hypothesis test: $H_0: \beta_{belavg} = 0$ against $H_1: \beta_{belavg} < 0$. Explain in words what they are testing and conclude appropriately given your results.
+
+**Hint: If you recall, your regression model reports the p-value from the two-sided alternative hypothesis ($H_0: \beta_{belavg} = 0$ against $H_1: \beta_{belavg} \neq 0$). Rather than dividing the p-value by 2, pass your t-statistic and `df` to the `pt()` function and compute the one-sided value yourself.**
+
+
+(iv) Adam has seen the results but wants to make sure they hold up to scrutiny. He suspects that other important variables may have been omitted from the model and could be biasing the results --- after all, perhaps attractive people also tend to be better educated or more experienced, and it is those factors doing the real work. He and Reagan suggest adding the following controls: `educ`, `exper`, `expersq`, `union`, `goodhlth`, `black`, `married`, `south`, `bigcity`, `smllcity`, and `service` to the model.
+
+- Estimate the models implied above and combine them with those prior into a single `stargazer` table. Present your four models ordered by gender. **Again, ensure your models are properly labelled. Use the `omit.stat = c("f", "ser")` argument to keep only the number of observations, $R^2$, and $\bar{R}^2$.**
+
+- Did adding the controls change the coefficients on `belavg` and `abvavg`? If so, how?
+
+**Note: Although you will be running the regression with the full set of controls, restrict your display to only the coefficients in the original model. Add a line item to your `stargazer` output to indicate which models include additional controls.**
+
+
+(v) Adam is now beginning to wonder whether the returns to his Ray-Ban-wearing good looks are truly the same across genders. He and Reagan decided to conduct a Chow test, at the 5% significance level, to test for equality in the slopes of the male and female regressions from **part (iv)**. To be explicit, the null is that the slope coefficients of the male and female equations are equal.
+
+**Hint: Use the SSR from the two separate regressions to compute $SSR_{u}$. The $SSR_{res}$ will come from the model in part (iv) with the dummy variable `female` added.**
+
+
