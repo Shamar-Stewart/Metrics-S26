@@ -18,5 +18,5 @@ Below is the live schedule for Fundamentals of Econometrics - Spring 2026
 | 10     | Basic Regression Analysis with Time Series Data                          |         |
 | 15     | Instrumental Variables Estimation & Two Stage Least Squares              |         |
 | 17     | Limited Dependent Variable Models                                       |         |
-| 13     | Pooling Cross Sections across Time: Simple Panel Data Methods            |         |
+| 13     | [Pooling Cross Sections across Time: Simple Panel Data Methods](2.Lectures/L8/L8_Panel_Data.pdf)            |         |
 | 14     | Advanced Panel Data Methods: Fixed & Random Effects                      |         |
