@@ -15,8 +15,8 @@ Below is the live schedule for Fundamentals of Econometrics - Spring 2026
 | 8      | [Heteroskedasticity](2.Lectures/L7/L7_Heteroskedasticity.pdf)                                                     |[HW6. RMD FILE](3.Homework/HW6/AAEC4804_STAT4804_AAEC5804G_HW6-S26_Empty.Rmd) <br> [HW6. PDF FILE](3.Homework/HW6/AAEC4804_STAT4804_AAEC5804G_HW6-S26_Empty.pdf)   <br> :clock5: $${\color{blue}\text{Due: May 1, 2026 (5:00 PM)}}$$         |
 | 9      | More on Specification & Data Issues                                     |         |
 |        | **Part II. Regression Analysis with Time Series Data & Advanced Topics**|         |
-| 10     | Basic Regression Analysis with Time Series Data                          |         |
-| 15     | Instrumental Variables Estimation & Two Stage Least Squares              |         |
+| 10     | ~Basic Regression Analysis with Time Series Data~                          |         |
+| 15     | ~Instrumental Variables Estimation & Two Stage Least Squares~              |         |
 | 17     | Limited Dependent Variable Models                                       |         |
 | 13     | [Pooling Cross Sections across Time: Simple Panel Data Methods](2.Lectures/L8/L8_Panel_Data.pdf)            |         |
 | 14     | Advanced Panel Data Methods: Fixed & Random Effects                      |         |
