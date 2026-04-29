@@ -41,6 +41,7 @@ One influential paper is "Does Federally Subsidized Rental Housing Depress Neigh
 Unfortunately, I could not find their data online. Instead, I will use some simulated data. The file of interest is `Affordable-housing.csv` in the `Data` folder. 
 
 The data contains information on the following variables:
+
 - `Price`: The price of the house.
 - `Close`: House close to a federally subsidized housing site (`=1`, our treated group) and not (`=0`, our control group).
 - `Post_Treat`: House prices before construction of new federally subsidized housing (`=0`) and after construction (`=1`).
@@ -96,7 +97,7 @@ For completeness, we will are trying to find the counterfactual price,  $\wideti
 \end{align*}
 <!-- **Visually:** -->
 
-```{r counterfactual, echo=F, fig.height=4,out.width = "70%"}
+```{r counterfactual, echo=F, fig.height=4}
 par(mar=c(3,3,1,1))
 # Parameters
 Tb <- 25    # Treated before
@@ -163,7 +164,7 @@ While it is a controversial topic, it is one that has been studied by economists
 
 For the following questions, we will use the `mex_sex.csv` file stored in the Data folder on GitHub. This file presents a subset of the data from the paper. There is information on four transactions (`trans`) per worker (`id`)-- this is what would make this a panel, to your question, Soumik. 
 
-The paper is in the `HW7` folder. While you are not expected to read and understand the entire paper, I do encourage you to browse through and use aspects of the paper to help you understand the context of the data and the questions that follow. Last, the `mex_ican_sex_meta.txt` provides a brief description of the variables in the dataset.
+The paper is in the `HW7` folder. While you are not expected to read and understand the entire paper, I do encourage you to browse through and use aspects of the paper to help you understand the context of the data and the questions that follow. Last, the `mex_sex_meta.txt` provides a brief description of the variables in the dataset.
 
 Go ahead and load the data directly into `R` from the `Data` folder on Github.
 
